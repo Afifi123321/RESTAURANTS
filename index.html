@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Delicious Eats</h1>
+        <p>Explore our exclusive dishes and add them to your order!</p>
+    </header>
+
+    <div class="container">
+        <div class="menu-section">
+            <h2>Our Menu</h2>
+
+            <div class="category">
+                <h3>Pizzas</h3>
+                <div class="menu-item">
+                    <img src="margherita.jpeg" alt="Margherita Pizza" class="food-img">
+                    <div class="menu-details">
+                        <h4>Margherita</h4>
+                        <p>A classic cheese pizza.</p>
+                        <label>Quantity: <input type="number" id="qty-margherita" value="1" min="1"></label>
+                        <button onclick="addToOrder('Margherita', 10, 'qty-margherita')">Add to Order - $10</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="pepperoni.jpeg" alt="Pepperoni Pizza" class="food-img">
+                    <div class="menu-details">
+                        <h4>Pepperoni</h4>
+                        <p>Pizza topped with pepperoni.</p>
+                        <label>Quantity: <input type="number" id="qty-pepperoni" value="1" min="1"></label>
+                        <button onclick="addToOrder('Pepperoni', 12, 'qty-pepperoni')">Add to Order - $12</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3>Burgers</h3>
+                <div class="menu-item">
+                    <img src="cheeseburger.jpeg" alt="Cheeseburger" class="food-img">
+                    <div class="menu-details">
+                        <h4>Cheeseburger</h4>
+                        <p>Juicy burger with cheese and lettuce.</p>
+                        <label>Quantity: <input type="number" id="qty-cheeseburger" value="1" min="1"></label>
+                        <button onclick="addToOrder('Cheeseburger', 8, 'qty-cheeseburger')">Add to Order - $8</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="chickenburger.jpg" alt="Chicken Burger" class="food-img">
+                    <div class="menu-details">
+                        <h4>Chicken Burger</h4>
+                        <p>Crispy chicken fillet burger.</p>
+                        <label>Quantity: <input type="number" id="qty-chickenburger" value="1" min="1"></label>
+                        <button onclick="addToOrder('Chicken Burger', 9, 'qty-chickenburger')">Add to Order - $9</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3>Pasta</h3>
+                <div class="menu-item">
+                    <img src="spaghetti.jpg" alt="Spaghetti" class="food-img">
+                    <div class="menu-details">
+                        <h4>Spaghetti</h4>
+                        <p>Classic spaghetti with marinara sauce.</p>
+                        <label>Quantity: <input type="number" id="qty-spaghetti" value="1" min="1"></label>
+                        <button onclick="addToOrder('Spaghetti', 14, 'qty-spaghetti')">Add to Order - $14</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-section">
+            <h2>Your Order</h2>
+            <ul id="order-list"></ul>
+            <h3>Total: $<span id="total-price">0</span></h3>
+            <button class="clear-btn" onclick="clearOrder()">Clear Order</button>
+            <button class="place-btn" onclick="placeOrder()">Place Order</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Delicious Eats. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
